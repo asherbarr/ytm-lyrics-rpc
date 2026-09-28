@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Music</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="titlebar">
+    <div id="titlebar-title">YouTube Music</div>
+    <div id="titlebar-controls">
+      <button id="btn-minimize" type="button" title="Minimize">&#x2013;</button>
+      <button id="btn-maximize" type="button" title="Maximize">&#x25A1;</button>
+      <button id="btn-close" type="button" title="Close">&#x2715;</button>
+    </div>
+  </div>
+  <div id="app">
+    <div id="player-pane">
+      <webview id="ytm" allowpopups></webview>
+    </div>
+    <aside id="lyrics-pane">
+      <header>
+        <h1 id="lyrics-title">No track playing</h1>
+        <h2 id="lyrics-artist"></h2>
+      </header>
+      <div id="lyrics-scroll">
+        <ol id="lyrics-lines"></ol>
+      </div>
+    </aside>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
