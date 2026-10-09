@@ -12,13 +12,6 @@ document.getElementById("btn-minimize").addEventListener("click", () => window.a
 document.getElementById("btn-maximize").addEventListener("click", () => window.api.toggleMaximizeWindow());
 document.getElementById("btn-close").addEventListener("click", () => window.api.closeWindow());
 
-// Electron's default UA includes "YouTubeMusic/1.0.0 ... Electron/x.y.z", which flags
-// this as an embedded webview to YouTube and makes it serve a degraded UI missing the
-// player-bar icon assets. A plain desktop Chrome UA avoids that.
-webview.setAttribute(
-  "useragent",
-  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-);
 webview.src = "https://music.youtube.com";
 
 // Hide YTM's own Lyrics/Comments/Related tabs in the queue panel — we show synced

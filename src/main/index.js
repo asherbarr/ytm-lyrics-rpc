@@ -7,6 +7,7 @@ const { initDiscordRPC, destroyDiscordRPC, setActivity, clearActivity } = requir
 const { fetchSyncedLyrics } = require("./lyrics");
 const { loadConfig, getConfigPath } = require("./config");
 const { createTray } = require("./tray");
+const { setupGoogleSignIn } = require("./google-auth");
 
 let mainWindow;
 
@@ -99,6 +100,8 @@ if (gotSingleInstanceLock) {
           `"discordClientId" in ${getConfigPath()}`
       );
     }
+
+    setupGoogleSignIn();
 
     await setupAdBlocker().catch(err => console.warn("[adblock] setup failed:", err.message));
 
