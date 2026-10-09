@@ -1,6 +1,6 @@
 {
   "name": "ytm-lyrics-rpc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "YouTube Music desktop wrapper with synced lyrics and Discord Rich Presence",
   "private": true,
   "main": "src/main/index.js",
